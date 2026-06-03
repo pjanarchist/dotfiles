@@ -1,0 +1,30 @@
+# Maintainer: PJ Anarchist <phillipjnr@tuta.io>
+pkgname=panagement-free-bin
+pkgver=2.8
+pkgrel=1
+pkgdesc="FREE reverb/spatialization plugin with depth and character - Auburn Sounds"
+arch=('x86_64')
+url="https://www.auburnsounds.com/products/Panagement.html"
+license=('custom:proprietary')
+depends=()
+makedepends=('unzip')
+source=("https://www.auburnsounds.com/downloads/Panagement-FREE-${pkgver}.zip")
+sha256sums=('5d8cf4804d839de97a02bbee40cdd67fa13971813e506111aceaac87b6640078')
+
+package() {
+    cd "${srcdir}"
+    unzip -q "Panagement-FREE-${pkgver}.zip"
+    
+    install -dm755 "${pkgdir}/usr/lib/clap"
+    install -dm755 "${pkgdir}/usr/lib/lv2"
+    install -dm755 "${pkgdir}/usr/lib/vst3"
+    
+    cp "Panagement-FREE-${pkgver}/Linux/Linux-64b-CLAP-FREE/Auburn Sounds Panagement 2.clap" \
+       "${pkgdir}/usr/lib/clap/"
+    
+    cp -r "Panagement-FREE-${pkgver}/Linux/Linux-64b-LV2-FREE/Auburn Sounds Panagement 2.lv2" \
+          "${pkgdir}/usr/lib/lv2/"
+    
+    cp -r "Panagement-FREE-${pkgver}/Linux/Linux-64b-VST3-FREE/Auburn Sounds Panagement 2.vst3" \
+          "${pkgdir}/usr/lib/vst3/"
+}

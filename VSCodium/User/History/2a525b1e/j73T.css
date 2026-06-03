@@ -1,0 +1,16 @@
+/* MAIN WINDOW */
+window {
+    all: unset;
+    width: 360px;
+    height: 100%;
+    padding: 10px;
+    border-radius: 0px;
+    background-color: rgba(26, 10, 30, 0.5);   /* lowered from 0.85 to 0.5 for visible blur */
+    animation: fadeIn 150ms ease-out;
+}
+
+/* INPUT (search bar) */
+#input {
+    color: #00ffb7;
+    background-color: rgba(46, 26, 48, 0.6);   /* lowered opacity */
+}

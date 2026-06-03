@@ -1,0 +1,84 @@
+{
+    "layer": "top",
+    "position": "top",
+    "reload_style_on_change": true,
+    "font-family": "Comic Sans MS",
+
+    "modules-left": [
+        "custom/arch",
+        "network",
+        "custom/spacer",
+        "sway/workspaces",
+        "pulseaudio#microphone"
+    ],
+    "modules-center": [
+        "pulseaudio#speaker",
+        "battery"
+    ],
+    "modules-right": [],
+
+    "custom/arch": {
+        "format": "󰠠",
+        "tooltip": false
+    },
+
+    "custom/spacer": {
+        "format": " ",
+        "tooltip": false
+    },
+
+    "network": {
+        "interval": 1,
+        "format-wifi": "{icon}",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "",
+        "on-click": "wezterm -e nmtui",
+        "tooltip-format-disconnected": "No Internet Connection",
+        "tooltip-format-wifi": "{essid}",
+        "tooltip-format-ethernet": "{ifname}",
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
+    },
+
+    "sway/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": "",
+            "empty": ""
+        },
+        "persistent-workspaces": {
+            "*": [1, 2, 3, 4, 5]
+        }
+    },
+
+    "pulseaudio#microphone": {
+        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "on-click-right": "pavucontrol",
+        "format": "{format_source}",
+        "format-source": "",
+        "format-source-muted": ""
+    },
+
+    "pulseaudio#speaker": {
+        "scroll-step": 10,
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol",
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 {volume}%",
+        "format-icons": ["󰕿", "󰖀", "󰕾"]
+    },
+
+    "battery": {
+        "interval": 1,
+        "states": {
+            "good": 100,
+            "ok": 70,
+            "warning": 50,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰂄 {capacity}%",
+        "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰂂", "󰁹"]
+    }
+}

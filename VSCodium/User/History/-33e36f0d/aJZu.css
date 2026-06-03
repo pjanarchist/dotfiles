@@ -1,0 +1,321 @@
+/* ---- 1. FONT HOOK CONFIGURATION ---- */
+@font-face {
+    font-family: 'Thegralke';
+    src: url('Thegralke.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --bg-base: #060606;
+    --frame-bg: #0c0c0d;
+    --text-primary: #cccccc;
+    --text-dark: #555555;
+    --line-border: #1a1a1c;
+    --fauux-red: rgba(180, 10, 20, 0.15);
+}
+
+/* Global Reset to Timeless, Naked Machine Serif */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, Baskerville, Georgia, serif;
+}
+
+body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* ---- 2. WIRED AUDIO-REACTIVE BACKGROUND ---- */
+.wired-noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    /* Base linear CRT scanline texture overlay */
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 4px, 6px 100%;
+}
+
+/* ---- 3. MAIN INTERFACE FRAME ---- */
+.terminal-frame {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 760px;
+    background-color: var(--frame-bg);
+    border: 1px solid var(--line-border);
+    padding: 30px;
+}
+
+.terminal-header {
+    text-align: left;
+    border-bottom: 1px solid var(--line-border);
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* Target Header Title Only with Custom Font */
+.thegralke-title {
+    font-family: 'Thegralke', serif;
+    font-size: 3rem;
+    font-weight: normal;
+    letter-spacing: 4px;
+    color: #ffffff;
+}
+
+.system-status {
+    text-align: right;
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+
+.pulse-text {
+    color: #881111;
+    animation: textBlink 2s infinite steps(1);
+}
+
+/* Tab Selection Switches */
+.terminal-nav {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--line-border);
+    padding-bottom: 10px;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: var(--text-dark);
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+.nav-btn:hover, .nav-btn.active {
+    color: var(--text-primary);
+}
+
+.nav-btn.active {
+    font-weight: bold;
+}
+
+/* Content Frame Controls */
+.portfolio-section {
+    display: none;
+}
+
+.portfolio-section.active {
+    display: block;
+}
+
+.section-label {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+/* ---- 4. BRUTALIST AUDIO RACK RENDER ---- */
+.audio-rack {
+    display: flex;
+    flex-direction: column;
+}
+
+.track-row {
+    border-bottom: 1px solid var(--line-border);
+    padding: 15px 0;
+}
+
+.track-row:first-child {
+    border-top: 1px solid var(--line-border);
+}
+
+.track-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.index-num {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: #661111;
+}
+
+.track-title {
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: #aaa;
+}
+
+.track-interface {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.play-btn {
+    background: none;
+    border: 1px solid var(--line-border);
+    color: var(--text-primary);
+    padding: 4px 12px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-family: monospace;
+}
+
+.play-btn:hover {
+    background-color: var(--text-primary);
+    color: var(--bg-base);
+}
+
+.scrub-container, .gain-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.gain-container {
+    flex-grow: 0;
+    width: 110px;
+}
+
+.time-read, .gain-label {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: var(--text-dark);
+}
+
+/* Timelines and Knobs as flat machine wires */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #151517;
+    height: 1px;
+    width: 100%;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 6px;
+    height: 6px;
+    background: var(--text-dark);
+    cursor: pointer;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+    background: #aa1111;
+}
+
+/* ---- 5. FIXED GEOMETRIC GALLERY GRID ---- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    border: 1px solid var(--line-border);
+    background-color: #080809;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 5px;
+}
+
+.gallery-item img {
+    max-width: 100%;
+    max-height: 80%;
+    object-fit: contain;
+    filter: grayscale(100%) contrast(120%);
+}
+
+.gallery-item span {
+    position: absolute;
+    bottom: 4px;
+    font-family: monospace;
+    font-size: 0.65rem;
+    color: var(--text-dark);
+}
+
+/* Placeholder box fallback if image hasn't been added to folder yet */
+.gallery-item.missing::before {
+    content: "✖";
+    color: #441111;
+    font-size: 1.2rem;
+    font-family: monospace;
+}
+
+/* ---- 6. TERMINAL GATEWAYS & FOOTER ---- */
+.links-terminal {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.terminal-link {
+    color: #88888b;
+    text-decoration: none;
+    font-size: 1.05rem;
+    width: fit-content;
+    transition: color 0.2s ease;
+}
+
+.terminal-link:hover {
+    color: #cc1122;
+}
+
+.terminal-footer {
+    margin-top: 40px;
+    border-top: 1px solid var(--line-border);
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: var(--text-dark);
+}
+
+@keyframes textBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@media (max-width: 600px) {
+    .terminal-header { flex-direction: column; align-items: flex-start; gap: 10px;}
+    .track-interface { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .scrub-container, .gain-container { width: 100%; }
+}

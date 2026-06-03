@@ -1,0 +1,304 @@
+/* CIRCVIT-Inspired Stark Cyberpunk Aesthetic */
+:root {
+    --bg-color: #0b0c10;
+    --panel-bg: #1f2833;
+    --text-main: #f0f0f0;
+    --text-muted: #8b949e;
+    --accent-glow: #00ffcc; /* Cyber-neon green/cyan accent */
+    --accent-dim: #00887a;
+    --border-color: #333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace; /* Brutalist tech font */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Plugin-style Interface Container */
+.plugin-container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #12131a;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    padding: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+
+/* Header UI */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px dashed var(--border-color);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--text-main);
+}
+
+.logo span {
+    color: var(--accent-glow);
+    text-shadow: 0 0 10px var(--accent-glow);
+}
+
+.status-light {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.light-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-glow);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent-glow);
+    animation: pulse 2s infinite linear;
+}
+
+/* Navigation / Control Panel Tabs */
+.controls-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.nav-btn {
+    background-color: #1a1c23;
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+    color: var(--text-main);
+    border-color: var(--text-muted);
+}
+
+.nav-btn.active {
+    background-color: var(--panel-bg);
+    color: var(--accent-glow);
+    border-color: var(--accent-glow);
+    box-shadow: inset 0 0 5px rgba(0, 255, 204, 0.2);
+}
+
+/* Main Viewport Modules */
+.portfolio-section {
+    display: none;
+    background-color: #161821;
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    min-height: 350px;
+}
+
+.portfolio-section.active {
+    display: block;
+}
+
+.section-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: var(--text-muted);
+    border-left: 3px solid var(--accent-glow);
+    padding-left: 10px;
+}
+
+/* Music Module Setup */
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.audio-track {
+    background-color: #1f222e;
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    text-align: center;
+}
+
+.track-meta {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Circular Dial Styling inspired by CIRCVIT VST GUI */
+.dial-container {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 15px auto;
+}
+
+.dial-svg {
+    transform: rotate(-90deg);
+    width: 100%;
+    height: 100%;
+}
+
+.dial-bg {
+    fill: none;
+    stroke: #2d3142;
+    stroke-width: 6;
+}
+
+.dial-progress {
+    fill: none;
+    stroke: var(--accent-glow);
+    stroke-width: 6;
+    stroke-dasharray: 188; /* 2 * pi * r (r=30) */
+    stroke-dashoffset: 188; 
+    transition: stroke-dashoffset 0.1s linear;
+}
+
+.play-pause-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #12131a;
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+}
+
+.play-pause-btn:hover {
+    color: var(--accent-glow);
+    border-color: var(--accent-glow);
+}
+
+/* Art Module Setup */
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.art-card {
+    border: 1px solid var(--border-color);
+    background-color: #1a1c24;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.art-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #1f222e 25%, #252936 25%, #252936 50%, #1f222e 50%, #1f222e 75%, #252936 75%, #252936 100%);
+    background-size: 40px 40px;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.art-card:hover .art-placeholder {
+    opacity: 0.8;
+}
+
+.art-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(11, 12, 16, 0.9);
+    padding: 8px;
+    font-size: 0.75rem;
+    border-top: 1px solid var(--border-color);
+    transform: translateY(100%);
+    transition: transform 0.2s ease;
+}
+
+.art-card:hover .art-info {
+    transform: translateY(0);
+}
+
+/* Links Module Setup */
+.links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1c24;
+    border: 1px solid var(--border-color);
+    padding: 15px 20px;
+    text-decoration: none;
+    color: var(--text-main);
+    transition: all 0.2s ease;
+}
+
+.link-item:hover {
+    border-color: var(--accent-glow);
+    background-color: #1f2833;
+    transform: translateX(5px);
+}
+
+.link-item span.url-tag {
+    color: var(--accent-glow);
+    font-size: 0.8rem;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+@media (max-width: 600px) {
+    .controls-nav {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,122 @@
+Variables
+
+set modMod4setmodMod4setterm foot
+set $menu wofi --show drun
+Output configuration
+
+output * bg ~/Pictures/Wallpapers/ghost2.png fill
+Window rules
+Utilities / dialogs float and center
+
+for_window [window_type="dialog"] floating enable, move position center
+for_window [window_type="utility"] floating enable, move position center
+for_window [window_type="toolbar"] floating enable, move position center
+for_window [window_type="splash"] floating enable, move position center
+for_window [title="File Operation Progress"] floating enable, move position center
+App-specific utilities
+
+for_window [app_id="pavucontrol"] floating enable, move position center
+for_window [class="Pavucontrol"] floating enable, move position center
+
+for_window [app_id="pcmanfm"] floating enable, move position 0 0
+for_window [class="Pcmanfm"] floating enable, move position 0 0
+
+for_window [app_id="zenity"] floating enable, move position 0 1
+for_window [class="Zenity"] floating enable, move position 0 1
+
+for_window [app_id="wofi"] floating enable
+REAPER: float on top-left
+
+for_window [class="REAPER"] floating enable, move position 0 0
+DISCORD: float on top-left
+
+for_window [class="discord"] floating enable, move position 0 0
+SPOTIFY: float on top-left
+
+for_window [class="Spotify"] floating enable, move position 0 0
+GODOT
+
+for_window [class="Godot"] floating enable, move position 0 0
+Key bindings
+
+bindsym mod+Returnexecmod+Returnexecterm
+bindsym mod+qkillbindsymmod+qkillbindsymmod+p exec pcmanfm
+bindsym mod+dexecwofi−−showdrun−−width500−−height100bindsymMod1+F4execwlogoutbindsymmod+dexecwofi−−showdrun−−width500−−height100bindsymMod1+F4execwlogoutbindsymmod+c reload
+
+floating_modifier modnormalbindsymmodnormalbindsymmod+space floating toggle
+Window movement
+
+bindsym mod+Leftfocusleftbindsymmod+Leftfocusleftbindsymmod+Down focus down
+bindsym mod+Upfocusupbindsymmod+Upfocusupbindsymmod+Right focus right
+
+bindsym mod+Shift+Leftswapleftbindsymmod+Shift+Leftswapleftbindsymmod+Shift+Down swap down
+bindsym mod+Shift+Upswapupbindsymmod+Shift+Upswapupbindsymmod+Shift+Right swap right
+
+bindsym mod+Ctrl+Leftmoveleft20pxfloatingbindsymmod+Ctrl+Leftmoveleft20pxfloatingbindsymmod+Ctrl+Down move down 20px floating
+bindsym mod+Ctrl+Upmoveup20pxfloatingbindsymmod+Ctrl+Upmoveup20pxfloatingbindsymmod+Ctrl+Right move right 20px floating
+Workspaces
+
+bindsym mod+1workspacenumber1bindsymmod+1workspacenumber1bindsymmod+2 workspace number 2
+bindsym mod+3workspacenumber3bindsymmod+3workspacenumber3bindsymmod+4 workspace number 4
+bindsym mod+5workspacenumber5bindsymmod+5workspacenumber5bindsymmod+6 workspace number 6
+bindsym mod+7workspacenumber7bindsymmod+7workspacenumber7bindsymmod+8 workspace number 8
+bindsym mod+9workspacenumber9bindsymmod+9workspacenumber9bindsymmod+0 workspace number 10
+
+bindsym mod+Shift+1movecontainertoworkspacenumber1bindsymmod+Shift+1movecontainertoworkspacenumber1bindsymmod+Shift+2 move container to workspace number 2
+bindsym mod+Shift+3movecontainertoworkspacenumber3bindsymmod+Shift+3movecontainertoworkspacenumber3bindsymmod+Shift+4 move container to workspace number 4
+bindsym mod+Shift+5movecontainertoworkspacenumber5bindsymmod+Shift+5movecontainertoworkspacenumber5bindsymmod+Shift+6 move container to workspace number 6
+bindsym mod+Shift+7movecontainertoworkspacenumber7bindsymmod+Shift+7movecontainertoworkspacenumber7bindsymmod+Shift+8 move container to workspace number 8
+bindsym mod+Shift+9movecontainertoworkspacenumber9bindsymmod+Shift+9movecontainertoworkspacenumber9bindsymmod+Shift+0 move container to workspace number 10
+Layout
+
+bindsym mod+bsplithbindsymmod+bsplithbindsymmod+v splitv
+bindsym mod+slayoutstackingbindsymmod+slayoutstackingbindsymmod+w layout tabbed
+bindsym mod+elayouttogglesplitbindsymmod+elayouttogglesplitbindsymmod+f fullscreen
+bindsym $mod+a focus parent
+Resize mode
+
+mode "resize" {
+bindsym Left resize shrink width 10px
+bindsym Down resize grow height 10px
+bindsym Up resize shrink height 10px
+bindsym Right resize grow width 10px
+bindsym Return mode "default"
+bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+Media / system keys
+
+bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym --locked XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym Print exec grim ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png
+Gaps and borders
+
+gaps inner 8px
+gaps outer 8px
+default_border pixel 2px
+default_floating_border pixel 1px
+Border colors (WILDBERRY)
+
+client.focused #d63384 #d63384 #ffe6f0 #ff77a9 #d63384
+client.focused_inactive #7b3f5a #7b3f5a #d6b3c6 #9e6b82 #7b3f5a
+client.unfocused #4a2e3e #2e1a27 #9e8a94 #5c4452 #4a2e3e
+client.urgent #ff4081 #1a0a12 #ff4081 #ff4081 #ff4081
+client.placeholder #3a2a32 #1e141a #7a6a74 #4a3a44 #3a2a32
+Input
+
+input "10900:54861:GTCH7503:00_2A94:D64D" {
+events disabled
+}
+
+seat seat0 xcursor_theme Qogir-cursors 24
+Startup
+
+exec waybar
+System includes
+
+include /etc/sway/config.d/*
+include touchpad

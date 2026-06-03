@@ -1,0 +1,112 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* GLOBAL */
+* {
+    font-family: "JetBrainsMono Nerd Font Propo";
+    font-size: 18px;
+    outline: none;
+    border: none;
+    text-shadow: none;
+    background: transparent;
+}
+
+/* MAIN WINDOW */
+window {
+    all: unset;
+
+    width: 360px;
+    height: 100%;
+
+    padding: 10px;
+    border-radius: 0px;
+
+    background-color: rgba(26, 10, 30, 0.9);
+    border: 2px solid #d63384;
+
+    animation: fadeIn 150ms ease-out;
+}
+
+/* CONTAINERS */
+#outer-box {
+    border: none;
+}
+
+#inner-box {
+    margin: 2px;
+    padding: 5px;
+    border: none;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+/* INPUT (search bar) */
+#input {
+    all: unset;
+
+    margin: 10px 12px;
+    padding: 14px;
+
+    border-radius: 10px;
+
+    color: #00ffb7;
+    background-color: rgba(46, 26, 48, 0.9);
+    border: 1px solid #9e6b82;
+
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+#input image {
+    border: none;
+    color: #d63384;
+}
+
+/* ENTRY LIST */
+#entry {
+    margin: 3px 10px;
+    padding: 8px 10px;
+
+    border-radius: 10px;
+    border: none;
+    color: #00ffb7;
+}
+
+/* HOVER */
+#entry:hover {
+    background-color: rgba(214, 51, 132, 0.15);
+}
+
+/* SELECTED ENTRY */
+#entry:selected {
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    background-color: rgba(214, 51, 132, 0.35);
+}
+
+#entry:selected #text {
+    color: #ffb1d8;
+}
+
+/* TEXT */
+#text {
+    margin: 5px;
+    border: none;
+    color: #00ffb7;
+}
+
+/* ARROWS */
+#entry arrow {
+    border: none;
+    color: #ff77a9;
+}

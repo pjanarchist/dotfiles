@@ -1,0 +1,26 @@
+{
+    "debug.terminal.clearBeforeReusing": true,
+    "code-runner.clearPreviousOutput": true,
+    "workbench.colorTheme": "Dark Rock",
+    "catppuccin-noctis-icons.hidesExplorerArrows": false,
+    "workbench.iconTheme": "lynx-pro-dark",
+    "workbench.productIconTheme": "lynx-material-icons",
+
+    "code-runner.runInTerminal": true,
+    "code-runner.preserveFocus": false,
+
+    "code-runner.executorMap": {
+        "c": "clear && cd $dir && gcc $fileName -o $fileNameWithoutExt -lraylib -lGL -lm -lpthread -ldl -lrt -lX11 && ./$fileNameWithoutExt"
+    },
+
+    "code-runner.saveAllFilesBeforeRun": true,
+
+    // Use clangd
+    "clangd.enable": true,
+
+    // Disable clangd inline parameter hints (removes 'format:')
+    "clangd.inlayHints.enable": false,
+
+    // Safety: disable Microsoft C/C++ hints if installed
+    "C_Cpp.inlayHints.enabled": false
+}

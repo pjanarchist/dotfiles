@@ -1,0 +1,14 @@
+plugin_dirs = [
+    '/home/frog/.local/share/yabridge/winplugins',
+    '/home/frog/.wine/drive_c/Program Files',
+    '/home/frog/.wine/drive_c/Program Files/Common Files',
+    '/home/frog/.wine/drive_c/Program Files/Common Files/VST3',
+    '/home/phillip/.local/share/yabridge/winplugins',
+]
+vst2_location = 'centralized'
+no_verify = false
+blacklist = []
+
+[last_known_config]
+wine_version = 'wine-9.21 (Staging)'
+yabridge_host_hash = 4279222400525443423

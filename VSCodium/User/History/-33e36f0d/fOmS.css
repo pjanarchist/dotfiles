@@ -1,0 +1,332 @@
+@font-face {
+    font-family: 'Thegralke';
+    src: url('Thegralke.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --bg-base: #060606;
+    --frame-bg: #0c0c0d;
+    --text-primary: #cccccc;
+    --text-dark: #555555;
+    --line-border: #1a1a1c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, Baskerville, Georgia, serif;
+}
+
+body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.wired-noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    opacity: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.4) 50%), 
+                linear-gradient(90deg, rgba(230, 10, 20, 0.08), rgba(0, 0, 0, 0), rgba(180, 5, 10, 0.08));
+    background-size: 100% 4px, 6px 100%;
+}
+
+.terminal-frame {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 760px;
+    background-color: var(--frame-bg);
+    border: 1px solid var(--line-border);
+    padding: 30px;
+}
+
+.terminal-header {
+    text-align: left;
+    border-bottom: 1px solid var(--line-border);
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.thegralke-title {
+    font-family: 'Thegralke', serif;
+    font-size: 3rem;
+    font-weight: normal;
+    letter-spacing: 4px;
+    color: #ffffff;
+}
+
+.system-status {
+    text-align: right;
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+
+.pulse-text {
+    display: block;
+    color: #aa1111;
+    font-size: 0.75rem;
+    text-transform: lowercase; /* Explicit user request layout criteria */
+    animation: textBlink 1s infinite steps(1);
+}
+
+.terminal-nav {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--line-border);
+    padding-bottom: 10px;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: var(--text-dark);
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.nav-btn:hover, .nav-btn.active {
+    color: var(--text-primary);
+}
+
+.nav-btn.active {
+    font-weight: bold;
+}
+
+.portfolio-section {
+    display: none;
+}
+
+.portfolio-section.active {
+    display: block;
+}
+
+.section-label {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.track-row {
+    border-bottom: 1px solid var(--line-border);
+    padding: 15px 0;
+}
+
+.track-row:first-child {
+    border-top: 1px solid var(--line-border);
+}
+
+.track-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.index-num {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: #661111;
+}
+
+.track-title {
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: #aaa;
+}
+
+.track-interface {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.play-btn {
+    background: none;
+    border: 1px solid var(--line-border);
+    color: var(--text-primary);
+    padding: 4px 12px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-family: monospace;
+}
+
+.play-btn:hover {
+    background-color: var(--text-primary);
+    color: var(--bg-base);
+}
+
+.scrub-container, .gain-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.gain-container {
+    flex-grow: 0;
+    width: 140px;
+}
+
+.time-read, .gain-label {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: var(--text-dark);
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #151517;
+    height: 1px;
+    width: 100%;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 6px;
+    height: 6px;
+    background: var(--text-dark);
+    cursor: pointer;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+    background: #aa1111;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    border: 1px solid var(--line-border);
+    background-color: #080809;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 5px;
+}
+
+.gallery-item img {
+    max-width: 100%;
+    max-height: 80%;
+    object-fit: contain;
+    filter: grayscale(100%) contrast(120%);
+}
+
+.gallery-item span {
+    position: absolute;
+    bottom: 4px;
+    font-family: monospace;
+    font-size: 0.65rem;
+    color: var(--text-dark);
+}
+
+.gallery-item.missing::before {
+    content: "✖";
+    color: #441111;
+    font-size: 1.2rem;
+    font-family: monospace;
+}
+
+/* ---- 3. JUMPSCARE WOBBLE SOCIAL MATRIX ---- */
+.links-terminal {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.terminal-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #88888b;
+    text-decoration: none;
+    font-size: 1.05rem;
+    width: fit-content;
+}
+
+.social-icon {
+    width: 18px;
+    height: 18px;
+    fill: var(--text-dark);
+    transition: fill 0.1s ease;
+}
+
+/* Hover activates a jarring frame-splitting glitch wobble */
+.terminal-link:hover {
+    color: #cc1122;
+}
+
+.terminal-link:hover .social-icon {
+    fill: #cc1122;
+    animation: jumpScareWobble 0.15s infinite alternate linear;
+}
+
+.terminal-footer {
+    margin-top: 40px;
+    border-top: 1px solid var(--line-border);
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: var(--text-dark);
+}
+
+#clock-colon {
+    animation: textBlink 1s infinite steps(1);
+}
+
+/* Keyframe Animations Engine */
+@keyframes textBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes jumpScareWobble {
+    0% { transform: scale(1.4) translate(-3px, 2px) rotate(-8deg); filter: contrast(200%); }
+    25% { transform: scale(0.9) translate(4px, -3px) rotate(10deg); }
+    50% { transform: scale(1.6) translate(-2px, -2px) rotate(-15deg); }
+    75% { transform: scale(1.1) translate(3px, 3px) rotate(12deg); }
+    100% { transform: scale(1.5) translate(-4px, 1px) rotate(-5deg); filter: hue-rotate(90deg); }
+}
+
+@media (max-width: 600px) {
+    .terminal-header { flex-direction: column; align-items: flex-start; gap: 10px;}
+    .track-interface { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .scrub-container, .gain-container { width: 100%; }
+}

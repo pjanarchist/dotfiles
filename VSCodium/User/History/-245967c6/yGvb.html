@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="gothic-container">
+        <!-- Elegant Minimal Header -->
+        <header>
+            <div class="site-title">ARCHIVE</div>
+            <div class="site-subtitle">Music & Art Collection</div>
+        </header>
+
+        <!-- Classic Minimalist Navigation -->
+        <nav class="navigation-panel">
+            <button class="nav-btn active" data-tab="music">I. Audio</button>
+            <button class="nav-btn" data-tab="art">II. Gallery</button>
+            <button class="nav-btn" data-tab="links">III. Gateways</button>
+        </nav>
+
+        <!-- Section: Music (6 Pre-configured Slots) -->
+        <div id="music" class="portfolio-section active">
+            <div class="section-heading">Composition Directory</div>
+            <div class="music-list">
+                
+                <!-- Repeatable Track Structure (1 to 6) -->
+                <!-- Just change the title names below inside the <h4> tags -->
+                <div class="audio-track-row">
+                    <div class="track-info">
+                        <span class="track-number">01</span>
+                        <h4>First Composition</h4>
+                    </div>
+                    <div class="track-controls">
+                        <button class="play-btn" data-track-id="1" data-audio-url="music/track1.mp3">▶ Play</button>
+                        
+                        <!-- Timeline Tracker -->
+                        <div class="timeline-container">
+                            <span class="time-display current-time">0:00</span>
+                            <input type="range" class="timeline-slider" id="timeline-1" min="0" value="0" step="0.1">
+                            <span class="time-display duration-time">0:00</span>
+                        </div>
+
+                        <!-- Volume Control -->
+                        <div class="volume-container">
+                            <span class="volume-icon">Vol</span>
+                            <input type="range" class="volume-slider" id="volume-1" min="0" max="1" value="0.8" step="0.01">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="audio-track-row">
+                    <div class="track-info">
+                        <span class="track-number">02</span>
+                        <h4>Second Composition</h4>
+                    </div>
+                    <div class="track-controls">
+                        <button class="play-btn" data-track-id="2" data-audio-url="music/track2.mp3">▶ Play</button>
+                        <div class="timeline-container">
+                            <span class="time-display current-time">0:00</span>
+                            <input type="range" class="timeline-slider" id="timeline-2" min="0" value="0" step="0.1">
+                            <span class="time-display duration-time">0:00</span>
+                        </div>
+                        <div class="volume-container">
+                            <span class="volume-icon">Vol</span>
+                            <input type="range" class="volume-slider" id="volume-2" min="0" max="1" value="0.8" step="0.01">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="audio-track-row">
+                    <div class="track-info">
+                        <span class="track-number">03</span>
+                        <h4>Third Composition</h4>
+                    </div>
+                    <div class="track-controls">
+                        <button class="play-btn" data-track-id="3" data-audio-url="music/track3.mp3">▶ Play</button>
+                        <div class="timeline-container">
+                            <span class="time-display current-time">0:00</span>
+                            <input type="range" class="timeline-slider" id="timeline-3" min="0" value="0" step="0.1">
+                            <span class="time-display duration-time">0:00</span>
+                        </div>
+                        <div class="volume-container">
+                            <span class="volume-icon">Vol</span>
+                            <input type="range" class="volume-slider" id="volume-3" min="0" max="1" value="0.8" step="0.01">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="audio-track-row">
+                    <div class="track-info">
+                        <span class="track-number">04</span>
+                        <h4>Fourth Composition</h4>
+                    </div>
+                    <div class="track-controls">
+                        <button class="play-btn" data-track-id="4" data-audio-url="music/track4.mp3">▶ Play</button>
+                        <div class="timeline-container">
+                            <span class="time-display current-time">0:00</span>
+                            <input type="range" class="timeline-slider" id="timeline-4" min="0" value="0" step="0.1">
+                            <span class="time-display duration-time">0:00</span>
+                        </div>
+                        <div class="volume-container">
+                            <span class="volume-icon">Vol</span>
+                            <input type="range" class="volume-slider" id="volume-4" min="0" max="1" value="0.8" step="0.01">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="audio-track-row">
+                    <div class="track-info">
+                        <span class="track-number">05</span>
+                        <h4>Fifth Composition</h4>
+                    </div>
+                    <div class="track-controls">
+                        <button class="play-btn" data-track-id="5" data-audio-url="music/track5.mp3">▶ Play</button>
+                        <div class="timeline-container">
+                            <span class="time-display current-time">0:00</span>
+                            <input type="range" class="timeline-slider" id="timeline-5" min="0" value="0" step="0.1">
+                            <span class="time-display duration-time">0:00</span>
+                        </div>
+                        <div class="volume-container">
+                            <span class="volume-icon">Vol</span>
+                            <input type="range" class="volume-slider" id="volume-5" min="0" max="1" value="0.8" step="0.01">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="audio-track-row">
+                    <div class="track-info">
+                        <span class="track-number">06</span>
+                        <h4>Sixth Composition</h4>
+                    </div>
+                    <div class="track-controls">
+                        <button class="play-btn" data-track-id="6" data-audio-url="music/track6.mp3">▶ Play</button>
+                        <div class="timeline-container">
+                            <span class="time-display current-time">0:00</span>
+                            <input type="range" class="timeline-slider" id="timeline-6" min="0" value="0" step="0.1">
+                            <span class="time-display duration-time">0:00</span>
+                        </div>
+                        <div class="volume-container">
+                            <span class="volume-icon">Vol</span>
+                            <input type="range" class="volume-slider" id="volume-6" min="0" max="1" value="0.8" step="0.01">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Section: Art Gallery (11 Slots looking inside "directory") -->
+        <div id="art" class="portfolio-section">
+            <div class="section-heading">Visual Gallery</div>
+            <div class="gallery-grid">
+                <!-- Drop your actual image files into your 'directory' folder and name them art1.jpg, art2.jpg, etc. -->
+                <div class="gallery-item"><img src="directory/art1.jpg" alt="Artwork 1" onerror="this.style.display='none';"><span>Piece I</span></div>
+                <div class="gallery-item"><img src="directory/art2.jpg" alt="Artwork 2" onerror="this.style.display='none';"><span>Piece II</span></div>
+                <div class="gallery-item"><img src="directory/art3.jpg" alt="Artwork 3" onerror="this.style.display='none';"><span>Piece III</span></div>
+                <div class="gallery-item"><img src="directory/art4.jpg" alt="Artwork 4" onerror="this.style.display='none';"><span>Piece IV</span></div>
+                <div class="gallery-item"><img src="directory/art5.jpg" alt="Artwork 5" onerror="this.style.display='none';"><span>Piece V</span></div>
+                <div class="gallery-item"><img src="directory/art6.jpg" alt="Artwork 6" onerror="this.style.display='none';"><span>Piece VI</span></div>
+                <div class="gallery-item"><img src="directory/art7.jpg" alt="Artwork 7" onerror="this.style.display='none';"><span>Piece VII</span></div>
+                <div class="gallery-item"><img src="directory/art8.jpg" alt="Artwork 8" onerror="this.style.display='none';"><span>Piece VIII</span></div>
+                <div class="gallery-item"><img src="directory/art9.jpg" alt="Artwork 9" onerror="this.style.display='none';"><span>Piece IX</span></div>
+                <div class="gallery-item"><img src="directory/art10.jpg" alt="Artwork 10" onerror="this.style.display='none';"><span>Piece X</span></div>
+                <div class="gallery-item"><img src="directory/art11.jpg" alt="Artwork 11" onerror="this.style.display='none';"><span>Piece XI</span></div>
+            </div>
+        </div>
+
+        <!-- Section: External Links -->
+        <div id="links" class="portfolio-section">
+            <div class="section-heading">External Corridors</div>
+            <div class="links-hierarchy">
+                <a href="mailto:your-email@example.com" class="classic-link" target="_blank">Correspondence // Email</a>
+                <a href="https://youtube.com" class="classic-link" target="_blank">Archive Transmissions // YouTube</a>
+                <a href="https://itch.io" class="classic-link" target="_blank">Interactive Relics // Itch.io</a>
+            </div>
+        </div>
+
+        <!-- Minimal Footer -->
+        <footer>
+            <span>All Material Registered</span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

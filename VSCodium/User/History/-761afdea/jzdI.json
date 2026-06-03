@@ -1,0 +1,8 @@
+{
+    "debug.terminal.clearBeforeReusing": true,
+    "code-runner.clearPreviousOutput": true,
+    "workbench.colorTheme": "Dark Rock",
+    "catppuccin-noctis-icons.hidesExplorerArrows": false,
+    "workbench.iconTheme": "lynx-pro-dark",
+    "workbench.productIconTheme": "lynx-material-icons"
+}

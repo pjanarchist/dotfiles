@@ -1,0 +1,12 @@
+# MPD connection
+host = "127.0.0.1"
+port = 6600
+
+# Optional password (if set in MPD)
+# password = "yourpassword"
+
+# Music directory (optional depending on setup)
+music_directory = "~/Music"
+
+# UI settings (if supported by your version)
+theme = "default"

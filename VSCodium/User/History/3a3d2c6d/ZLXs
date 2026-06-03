@@ -1,0 +1,19 @@
+# ~/.config/mako/config
+# Wildberry theme – green body text
+
+sort=+time
+layer=overlay
+margin=10
+padding=15
+border-radius=10
+font=sans-serif 11
+max-visible=5
+default-timeout=5000
+
+background-color=#2e1a27
+border-color=#d63384
+text-color=#ffffff
+width=400
+
+# Bold white heading, green body text
+format=<b>%s</b>\n<span color="#A8E26E">%b</span>

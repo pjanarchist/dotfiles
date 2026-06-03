@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAYER_07 // ARCHIVE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Responsive static background canvas -->
+    <div class="wired-noise" id="audio-visual-bg"></div>
+
+    <div class="terminal-frame">
+        <!-- Stark Lain / Fauux Interface Header -->
+        <header class="terminal-header">
+            <div class="header-main-group">
+                <div class="profile-frame">
+                    <img src="profile.png" alt="" onerror="this.style.display='none';">
+                </div>
+                <h1 class="thegralke-title">ARCHIVE</h1>
+            </div>
+            <div class="system-status">
+                <span>MESSAGE _FROM_AUTHOR :</span>
+                <span class="pulse-text">you must accept tha frog!!!</span>
+            </div>
+        </header>
+
+        <!-- Minimalist System Tabs -->
+        <nav class="terminal-nav">
+            <button class="nav-btn active" data-tab="music">I. AUDIO_DATA</button>
+            <button class="nav-btn" data-tab="art">II. VISUAL_DATA</button>
+            <button class="nav-btn" data-tab="links">III. GATEWAYS</button>
+        </nav>
+
+        <!-- Section 1: Music (6 Track Rack with Album Art) -->
+        <div id="music" class="portfolio-section active">
+            <div class="section-label">[COMPOSITIONS_TRACKED: 06]</div>
+            <div class="audio-rack">
+                
+                <!-- Track 1 -->
+                <div class="track-row">
+                    <div class="track-meta">
+                        <div class="album-art-slot">
+                            <img src="art/art1.png" alt="" onerror="this.parentNode.classList.add('missing-art');">
+                        </div>
+                        <span class="index-num">01</span>
+                        <h3 class="track-title">Composition_01</h3>
+                    </div>
+                    <div class="track-interface">
+                        <button class="play-btn" data-track-id="1" data-audio-url="music/track1.mp3">PLAY</button>
+                        <div class="scrub-container">
+                            <span class="time-read current-time">0:00</span>
+                            <div class="shuriken-slider-wrapper">
+                                <input type="range" class="timeline-slider" id="timeline-1" min="0" value="0" step="0.1">
+                            </div>
+                            <span class="time-read total-time">0:00</span>
+                        </div>
+                        <div class="gain-container">
+                            <span class="gain-label">VOLUME</span>
+                            <div class="shuriken-slider-wrapper">
+                                <input type="range" class="volume-slider" id="volume-1" min="0" max="1" value="0.7" step="0.01">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Track 2 -->
+                <div class="track-row">
+                    <div class="track-meta">
+                        <div class="album-art-slot">
+                            <img src="art/art2.png" alt="" onerror="this.parentNode.classList.add('missing-art');">
+                        </div>
+                        <span class="index-num">02</span>
+                        <h3 class="track-title">Composition_02</h3>
+                    </div>
+                    <div class="track-interface">
+                        <button class="play-btn" data-track-id="2" data-audio-url="music/track2.mp3">PLAY</button>
+                        <div class="scrub-container">
+                            <span class="time-read current-time">0:00</span>
+                            <div class="shuriken-slider-wrapper">
+                                <input type="range" class="timeline-slider" id="timeline-2" min="0" value="0" step="0.1">
+                            </div>
+                            <span class="time-read total-time">0:00</span>
+                        </div>
+                        <div class="gain-container">
+                            <span class="gain-label">VOLUME</span>
+                            <div class="shuriken-slider-wrapper">
+                                <input type="range" class="volume-slider" id="volume-2" min="0" max="1" value="0.7" step="0.01">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Track 3 -->
+                <div class="track-row">
+                    <div class="track-meta">
+                        <div class="album-art-slot">
+                            <img src="art/art3.png" alt="" onerror="this.parentNode.classList.add('missing-art');">
+                        </div>
+                        <span class="index-num">03</span>
+                        <h3 class="track-title">Composition_03</h3>
+                    </div>
+                    <div class="track-interface">
+                        <button class="play-btn" data-track-id="3" data-audio-url="music/track3.mp3">PLAY</button>
+                        <div class="scrub-container">
+                            <span class="time-read current-time">0:00</span>
+                            <div class="shuriken-slider-wrapper">
+                                <input type="range" class="timeline-slider" id="timeline-3" min="0" value="0" step="0.1">
+                            </div>
+                            <span class="time-read total-time">0:00</span>
+                        </div>
+                        <div class="gain-container">
+                            <span class="gain-label">VOLUME</span>
+                            <div class="shuriken-slider-wrapper">
+                                <input type="range" class="volume-slider" id="volume-3" min="0" max="1" value="0.7" step="0.01">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Track 4 -->
+                <div class="track-row">
+                    <div class="track-meta">
+                        <div class="album-art-slot">
+                            <img src="art/art4.png" alt="" onerror="this.parentNode.classList.add('missing-art');">
+                        </div>
+                        <span class="index-num">04</span>
+                        <h3 class="track-title">Composition_04</h3>
+                    </div>
+                    <div class="track-interface">
+                        <button class="play-btn" data-track-id="4" data-audio-url="music/track4.mp3">PLAY</button>
+                        <div class="scrub-container">
+                            <span class="time-read current-time">0:00</span>
+                            <div class="shuriken-slider-wrapper">
+                                <input type="range" class="timeline-slider" id="timeline-4" min="0" value="0" step="0.1">
+                            </div>
+                            <span class="time-read total-time">0:00</span>
+                        </div>
+                        <div class="gain-container">
+                            <span class="gain-label">VOLUME</span>
+                            <div class="shuriken-slider-wrapper">
+                                <input type="range" class="volume-slider" id="volume-4" min="0" max="1" value="0.7" step="0.01">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Track 5 -->
+                <div class="track-row">
+                    <div class="track-meta">
+                        <div class="album-art-slot">
+                            <img src="art/art5.png" alt="" onerror="this.parentNode.classList.add('missing-art');">
+                        </div>
+                        <span class="index-num">05</span>
+                        <h3 class="track-title">Composition_05</h3>
+                    </div>
+                    <div class="track-interface">
+                        <button class="play-btn" data-track-id="5" data-audio-url="music/track5.mp3">PLAY</button>
+                        <div class="scrub-container">
+                            <span class="time-read current-time">0:00</span>
+                            <div class="shuriken-slider-wrapper">
+                                <input type="range" class="timeline-slider" id="timeline-5" min="0" value="0" step="0.1">
+                            </div>
+                            <span class="time-read total-time">0:00</span>
+                        </div>
+                        <div class="gain-container">
+                            <span class="gain-label">VOLUME</span>
+                            <div class="shuriken-slider-wrapper">
+                                <input type="range" class="volume-slider" id="volume-5" min="0" max="1" value="0.7" step="0.01">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Track 6 -->
+                <div class="track-row">
+                    <div class="track-meta">
+                        <div class="album-art-slot">
+                            <img src="art/art6.png" alt="" onerror="this.parentNode.classList.add('missing-art');">
+                        </div>
+                        <span class="index-num">06</span>
+                        <h3 class="track-title">Composition_06</h3>
+                    </div>
+                    <div class="track-interface">
+                        <button class="play-btn" data-track-id="6" data-audio-url="music/track6.mp3">PLAY</button>
+                        <div class="scrub-container">
+                            <span class="time-read current-time">0:00</span>
+                            <div class="shuriken-slider-wrapper">
+                                <input type="range" class="timeline-slider" id="timeline-6" min="0" value="0" step="0.1">
+                            </div>
+                            <span class="time-read total-time">0:00</span>
+                        </div>
+                        <div class="gain-container">
+                            <span class="gain-label">VOLUME</span>
+                            <div class="shuriken-slider-wrapper">
+                                <input type="range" class="volume-slider" id="volume-6" min="0" max="1" value="0.7" step="0.01">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Section 2: Gallery (11 Slots looking inside "directory") -->
+        <div id="art" class="portfolio-section">
+            <div class="section-label">[VISUAL_ASSETS_INDEXED: 11]</div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="directory/art1.png" alt="" onerror="this.parentNode.classList.add('missing');"><span>[01_IMG]</span></div>
+                <div class="gallery-item"><img src="directory/art2.jpg" alt="" onerror="this.parentNode.classList.add('missing');"><span>[02_IMG]</span></div>
+                <div class="gallery-item"><img src="directory/art3.jpg" alt="" onerror="this.parentNode.classList.add('missing');"><span>[03_IMG]</span></div>
+                <div class="gallery-item"><img src="directory/art4.jpg" alt="" onerror="this.parentNode.classList.add('missing');"><span>[04_IMG]</span></div>
+                <div class="gallery-item"><img src="directory/art5.jpg" alt="" onerror="this.parentNode.classList.add('missing');"><span>[05_IMG]</span></div>
+                <div class="gallery-item"><img src="directory/art6.jpg" alt="" onerror="this.parentNode.classList.add('missing');"><span>[06_IMG]</span></div>
+                <div class="gallery-item"><img src="directory/art7.jpg" alt="" onerror="this.parentNode.classList.add('missing');"><span>[07_IMG]</span></div>
+                <div class="gallery-item"><img src="directory/art8.jpg" alt="" onerror="this.parentNode.classList.add('missing');"><span>[08_IMG]</span></div>
+                <div class="gallery-item"><img src="directory/art9.jpg" alt="" onerror="this.parentNode.classList.add('missing');"><span>[09_IMG]</span></div>
+                <div class="gallery-item"><img src="directory/art10.jpg" alt="" onerror="this.parentNode.classList.add('missing');"><span>[10_IMG]</span></div>
+                <div class="gallery-item"><img src="directory/art11.jpg" alt="" onerror="this.parentNode.classList.add('missing');"><span>[11_IMG]</span></div>
+            </div>
+        </div>
+
+        <!-- Section 3: Gateways -->
+        <div id="links" class="portfolio-section">
+            <div class="section-label">[EXTERNAL_GATEWAYS]</div>
+            <div class="links-terminal">
+                <a href="mailto:your-email@example.com" class="terminal-link" target="_blank">
+                    <svg class="social-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    <span>TRANSMIT_EMAIL_CORRESPONDENCE</span>
+                </a>
+                <a href="https://youtube.com" class="terminal-link" target="_blank">
+                    <svg class="social-icon" viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    <span>STREAM_BROADCAST_YOUTUBE</span>
+                </a>
+                <a href="https://itch.io" class="terminal-link" target="_blank">
+                    <svg class="social-icon" viewBox="0 0 24 24"><path d="M3.504 3.001c-1.373 0-2.502 1.077-2.502 2.45v11.66c0 .543.166 1.041.448 1.458l3.189 3.914a1.248 1.248 0 0 0 .973.458h12.77c.379 0 .723-.171.954-.458l3.19-3.914c.28-.417.447-.915.447-1.459V5.45c0-1.373-1.13-2.45-2.503-2.45H3.504zm4.12 4.41c1.238 0 2.242 1.004 2.242 2.242s-1.004 2.243-2.243 2.243c-1.237 0-2.242-1.005-2.242-2.243 0-1.238 1.005-2.242 2.243-2.242zm8.75 0c1.238 0 2.243 1.004 2.243 2.242s-1.005 2.243-2.243 2.243c-1.238 0-2.242-1.005-2.242-2.243 0-1.238 1.004-2.242 2.242-2.242zM12 13.924c2.203 0 4.144 1.151 5.253 2.879H6.746c1.11-1.728 3.05-2.879 5.254-2.879z"/></svg>
+                    <span>DETACH_TO_ITCH_IO_FILESYSTEM</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Dynamic System Footer -->
+        <footer class="terminal-footer">
+            <span id="live-day-field">LOADING_DAY...</span>
+            <span>CLOCK: <span id="clock-hours">08</span><span id="clock-colon">:</span><span id="clock-minutes">47</span> HAHAHAHA...</span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

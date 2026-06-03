@@ -1,0 +1,8 @@
+# Ignore large caches, extensions, and local states
+VSCodium/User/workspaceStorage/
+VSCodium/User/globalStorage/
+VSCodium/CachedData/
+VSCodium/Backups/
+spotify/Users/
+**/cache/
+**/.cache/

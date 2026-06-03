@@ -1,0 +1,36 @@
+# ~/.config/mako/config
+
+font=monospace 10
+
+# Wildberry theme
+background-color=#1a0a1e
+text-color=#a3f0a0
+border-color=#d63384
+border-size=2
+border-radius=6
+
+padding=10
+margin=10
+default-timeout=5000
+max-visible=5
+layer=top
+
+# Position
+anchor=bottom-left
+
+# Urgency styles
+[urgency=low]
+background-color=#1a0a1e
+text-color=#a3f0a0
+border-color=#ff77a9
+
+[urgency=normal]
+background-color=#2e1a30
+text-color=#a3f0a0
+border-color=#9e6b82
+
+[urgency=high]
+background-color=#1a0a12
+text-color=#a3f0a0
+border-color=#d63384
+default-timeout=0

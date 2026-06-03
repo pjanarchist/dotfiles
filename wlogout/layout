@@ -1,0 +1,18 @@
+{
+    "label": "logout",
+    "action": "sleep 0.5 && swaymsg exit",
+    "text": "Logout",
+    "keybind": "l"
+}
+{
+    "label": "reboot",
+    "action": "systemctl reboot",
+    "text": "Reboot",
+    "keybind": "r"
+}
+{
+    "label": "shutdown",
+    "action": "systemctl poweroff",
+    "text": "Shutdown",
+    "keybind": "s"
+}

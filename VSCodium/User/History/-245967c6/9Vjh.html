@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Portfolio // VST Style</title>
+    <!-- Link to external styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="plugin-container">
+        <!-- Top Panel Header -->
+        <header>
+            <div class="logo">PORTFOLIO<span>.vst</span></div>
+            <div class="status-light">
+                <div class="light-dot"></div>
+                <span>ENGINE READY</span>
+            </div>
+        </header>
+
+        <!-- Main Visual Navigation Switches -->
+        <div class="controls-nav">
+            <button class="nav-btn active" data-tab="music">01 // MUSIC</button>
+            <button class="nav-btn" data-tab="art">02 // ART</button>
+            <button class="nav-btn" data-tab="links">03 // LINKS</button>
+        </div>
+
+        <!-- Section: Music -->
+        <div id="music" class="portfolio-section active">
+            <div class="section-title">Audio Racks</div>
+            <div class="music-grid">
+                
+                <!-- Track 1 -->
+                <div class="audio-track">
+                    <h4>Track Alpha</h4>
+                    <div class="dial-container">
+                        <svg class="dial-svg" viewBox="0 0 70 70">
+                            <circle class="dial-bg" cx="35" cy="35" r="30"/>
+                            <circle id="progress-1" class="dial-progress" cx="35" cy="35" r="30"/>
+                        </svg>
+                        <button class="play-pause-btn" data-track-id="1" data-audio-url="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">▶</button>
+                    </div>
+                    <p class="track-meta">Synth / Bass Mix</p>
+                </div>
+
+                <!-- Track 2 -->
+                <div class="audio-track">
+                    <h4>Track Beta</h4>
+                    <div class="dial-container">
+                        <svg class="dial-svg" viewBox="0 0 70 70">
+                            <circle class="dial-bg" cx="35" cy="35" r="30"/>
+                            <circle id="progress-2" class="dial-progress" cx="35" cy="35" r="30"/>
+                        </svg>
+                        <button class="play-pause-btn" data-track-id="2" data-audio-url="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3">▶</button>
+                    </div>
+                    <p class="track-meta">Industrial Beats</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Section: Art -->
+        <div id="art" class="portfolio-section">
+            <div class="section-title">Visual Assets</div>
+            <div class="art-grid">
+                <div class="art-card">
+                    <div class="art-placeholder"></div>
+                    <div class="art-info">Project_01.png</div>
+                </div>
+                <div class="art-card">
+                    <div class="art-placeholder"></div>
+                    <div class="art-info">Project_02.png</div>
+                </div>
+                <div class="art-card">
+                    <div class="art-placeholder"></div>
+                    <div class="art-info">Illustration_Final.jpg</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Links -->
+        <div id="links" class="portfolio-section">
+            <div class="section-title">External Gateways</div>
+            <div class="links-list">
+                
+                <a href="mailto:your-email@example.com" class="link-item" target="_blank">
+                    <span>[EMAIL] Contact Terminal</span>
+                    <span class="url-tag">via mailto</span>
+                </a>
+
+                <a href="https://youtube.com" class="link-item" target="_blank">
+                    <span>[YOUTUBE] Broadcast Station</span>
+                    <span class="url-tag">youtube.com</span>
+                </a>
+
+                <a href="https://itch.io" class="link-item" target="_blank">
+                    <span>[ITCH.IO] Software / Games</span>
+                    <span class="url-tag">itch.io</span>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <span>SYSTEM: ARCH-X64</span>
+            <span>DESIGN INSPIRED BY CIRCVIT</span>
+        </footer>
+    </div>
+
+    <!-- Link to external interactivity engine -->
+    <script src="script.js"></script>
+</body>
+</html>

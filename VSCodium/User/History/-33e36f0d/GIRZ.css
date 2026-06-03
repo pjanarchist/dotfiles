@@ -1,0 +1,297 @@
+/* Classic Gothic & Fine Print Aesthetic */
+:root {
+    --bg-dark: #0d0d0d;        /* Deep, stark black */
+    --panel-dark: #141414;     /* Crisp charcoal container */
+    --text-ivory: #e6e4df;     /* Soft ivory font (less blinding than white) */
+    --text-muted: #73716c;     /* Stone gray */
+    --border-fine: #262524;    /* Subtle separation lines */
+    --accent-hover: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Clean, timeless serif typography for a literary, gothic look */
+    font-family: 'Times New Roman', Times, Baskerville, Georgia, serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-ivory);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Master Grid Framework Container */
+.gothic-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--panel-dark);
+    border: 1px solid var(--border-fine);
+    padding: 40px;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-fine);
+    margin-bottom: 30px;
+}
+
+.site-title {
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--text-ivory);
+}
+
+.site-subtitle {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    margin-top: 8px;
+}
+
+/* Tab bar */
+.navigation-panel {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--border-fine);
+    padding-bottom: 15px;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.nav-btn:hover {
+    color: var(--text-ivory);
+}
+
+.nav-btn.active {
+    color: var(--text-ivory);
+    font-weight: bold;
+    border-bottom: 1px solid var(--text-ivory);
+}
+
+/* Universal Section Controls */
+.portfolio-section {
+    display: none;
+    min-height: 400px;
+}
+
+.portfolio-section.active {
+    display: block;
+}
+
+.section-heading {
+    font-size: 1.2rem;
+    font-style: italic;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+/* Clean, Linear Audio List Styling */
+.music-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.audio-track-row {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-bottom: 1px solid var(--border-fine);
+    background-color: #0f0f0f;
+}
+
+.track-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.track-number {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-family: monospace;
+}
+
+.track-info h4 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.track-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Plain Minimalist Form Controls */
+.play-btn {
+    background: none;
+    border: 1px solid var(--border-fine);
+    color: var(--text-ivory);
+    padding: 6px 16px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.play-btn:hover {
+    background-color: var(--text-ivory);
+    color: var(--bg-dark);
+}
+
+/* Timelines and Sliders */
+.timeline-container, .volume-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.volume-container {
+    flex-grow: 0;
+    width: 130px;
+}
+
+.time-display, .volume-icon {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-family: monospace;
+}
+
+/* Universal Range Sliders Modification */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--border-fine);
+    height: 2px;
+    width: 100%;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 8px;
+    height: 8px;
+    background: var(--text-muted);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+    background: var(--text-ivory);
+}
+
+/* Elegant Grid for Art */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 25px;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid var(--border-fine);
+    padding: 10px;
+    background-color: #0f0f0f;
+    aspect-ratio: 4/5;
+    justify-content: space-between;
+}
+
+.gallery-item img {
+    max-width: 100%;
+    max-height: 80%;
+    object-fit: contain;
+    filter: grayscale(40%); /* Subtle classical treatment override */
+    transition: filter 0.3s ease;
+}
+
+.gallery-item:hover img {
+    filter: grayscale(0%);
+}
+
+.gallery-item span {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+/* Classic Architecture Links */
+.links-hierarchy {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.classic-link {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid var(--border-fine);
+    text-decoration: none;
+    color: var(--text-ivory);
+    letter-spacing: 2px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.classic-link:hover {
+    border-color: var(--text-ivory);
+    background-color: #111;
+}
+
+footer {
+    margin-top: 40px;
+    border-top: 1px solid var(--border-fine);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+@media (max-width: 650px) {
+    .track-controls {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .timeline-container, .volume-container {
+        width: 100%;
+    }
+}

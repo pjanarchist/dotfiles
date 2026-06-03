@@ -1,0 +1,110 @@
+* {
+    font-size: 15px;
+    font-family: "Comic Sans MS", "Symbols Nerd Font", cursive;
+}
+
+window#waybar {
+    all: unset;
+}
+
+.modules-left {
+    margin: 10px 0px 5px 10px;
+}
+.modules-center {
+    margin: 10px 0px 5px 0px;
+}
+.modules-right {
+    margin: 10px 10px 5px 0px;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    padding: 7px;
+    border-radius: 10px;
+    background: rgba(26, 10, 30, 0.5);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+}
+
+tooltip {
+    background-color: rgba(26, 10, 30, 0.5);
+}
+tooltip label {
+    color: #a3f0a0;
+}
+
+#network:hover,
+#pulseaudio:hover,
+#battery:hover {
+    transition: all 0.3s ease;
+    opacity: 0.5;
+}
+
+#custom-arch,
+#network,
+#pulseaudio,
+#battery,
+#custom-spacer {
+    padding: 0px 5px;
+    color: #a3f0a0;
+}
+
+#custom-arch {
+    font-size: 17px;
+    color: #d63384;
+}
+
+#custom-spacer {
+    min-width: 30px;
+}
+
+/* Workspace buttons */
+#workspaces button {
+    all: unset;
+    padding: 0px 5px;
+    color: rgba(122, 63, 90, 0.5);           /* empty workspaces - muted */
+}
+#workspaces button:hover,
+#workspaces button.empty:hover {
+    color: #9e6b82;                           /* hover - lighter muted */
+    border: none;
+    transition: all 0.3s ease;
+}
+#workspaces button.active {
+    color: #d63384;                           /* current workspace - bright pink */
+    border: none;
+}
+#workspaces button.empty {
+    color: #1a0a1e;                           /* truly empty - invisible on bg */
+    border: none;
+}
+#workspaces button.empty.active {
+    color: #d63384;                           /* current workspace (even if empty) */
+    border: none;
+}
+#workspaces button:not(.empty):not(.active) {
+    color: #ff77a9;                           /* has windows but not focused - light pink */
+}
+
+/* Battery states */
+#battery.charging.good,
+#battery.plugged.good,
+#battery.good:not(.charging) {
+    color: #a3f0a0;
+}
+#battery.charging.ok,
+#battery.plugged.ok,
+#battery.ok:not(.charging) {
+    color: #ffd700;
+}
+#battery.charging.warning,
+#battery.plugged.warning,
+#battery.warning:not(.charging) {
+    color: #ff7f50;
+}
+#battery.charging.critical,
+#battery.plugged.critical,
+#network.disconnected,
+#battery.critical:not(.charging) {
+    color: #d63384;
+}
