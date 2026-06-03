@@ -6,3 +6,10 @@ VSCodium/Backups/
 spotify/Users/
 **/cache/
 **/.cache/
+
+# Ignore VSCodium caches and runtime data
+VSCodium/Cache/
+VSCodium/GPUCache/
+VSCodium/CachedData/
+VSCodium/backups/
+VSCodium/Cache/
