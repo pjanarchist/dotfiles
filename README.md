@@ -2,7 +2,7 @@
 
 Personal configuration files for my machine, **Amphibia**.
 
-## 🛠️ Stuff
+## 🛠️ Stack
 - **Window Manager:** [Sway](.config/sway/)
 - **Bar:** [Waybar](.config/waybar/)
 - **Launcher:** [Wofi](.config/wofi/)
