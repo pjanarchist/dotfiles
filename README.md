@@ -19,9 +19,10 @@ Personal configuration files for my machine, **Amphibia**.
 - `.bashrc`: Bash shell customizations.
 - `VSCodium/`: Editor settings and extensions.
 
+  ![Amphibia Screenshot](https://github.com/pjanarchist/dotfiles/raw/main/screenshot.png)
+
 ## 🚀 Usage
 To clone this repository to a new machine:
 
 ```bash
 git clone git@github.com:pjanarchist/dotfiles.git ~/dotfiles
-![Amphibia Screenshot](https://github.com/pjanarchist/dotfiles/raw/main/screenshot.png)
