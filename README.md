@@ -3,15 +3,20 @@
 Personal configuration files for my machine, **Amphibia**.
 
 ## 🛠️ Stack
-- **Window Manager:** [Sway](https://swaywm.org/)
-- **Terminal:** [Alacritty](https://alacritty.org/)
-- **Shell:** [Bash](https://www.gnu.org/software/bash/)
-- **Editor:** [VSCodium](https://vscodium.com/)
+- **Window Manager:** [Sway](.config/sway/)
+- **Bar:** [Waybar](.config/waybar/)
+- **Launcher:** [Wofi](.config/wofi/)
+- **Terminal:** [Foot](.config/foot/) & [Alacritty](.config/alacritty/)
+- **Shell:** [Bash](.bashrc)
+- **Editor:** [VSCodium](VSCodium/)
 
 ## 📁 Repository Structure
 - `.config/sway/`: Sway window manager configuration.
+- `.config/waybar/`: Waybar status bar settings.
+- `.config/wofi/`: Wofi application launcher configuration.
+- `.config/foot/`: Foot terminal settings.
 - `.config/alacritty/`: Alacritty terminal settings.
-- `.bashrc`: Bash shell customizations and aliases.
+- `.bashrc`: Bash shell customizations.
 - `VSCodium/`: Editor settings and extensions.
 
 ## 🚀 Usage
