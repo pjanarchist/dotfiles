@@ -2,17 +2,19 @@
 
 Personal configuration files for my machine, **Amphibia**.
 
-## 🛠️ Setup
-- **Shell:** [e.g., Zsh / Bash / Fish]
-- **Window Manager/DE:** [e.g., i3 / Sway / Hyprland]
-- **Terminal:** [e.g., Alacritty / Kitty]
-- **Editor:** [e.g., VSCodium / Neovim]
+## 🛠️ Stack
+- **Window Manager:** [Sway](https://swaywm.org/)
+- **Terminal:** [Alacritty](https://alacritty.org/)
+- **Shell:** [Bash](https://www.gnu.org/software/bash/)
+- **Editor:** [VSCodium](https://vscodium.com/)
 
 ## 📁 Repository Structure
-- `VSCodium/`: Configurations for my editor.
-- `.gitignore`: Files and directories to be excluded from version control.
+- `.config/sway/`: Sway window manager configuration.
+- `.config/alacritty/`: Alacritty terminal settings.
+- `.bashrc`: Bash shell customizations and aliases.
+- `VSCodium/`: Editor settings and extensions.
 
-## 🚀 How to use
+## 🚀 Usage
 To clone this repository to a new machine:
 
 ```bash
