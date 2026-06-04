@@ -24,3 +24,4 @@ To clone this repository to a new machine:
 
 ```bash
 git clone git@github.com:pjanarchist/dotfiles.git ~/dotfiles
+![Amphibia Screenshot](https://github.com/pjanarchist/dotfiles/raw/main/screenshot.png)
