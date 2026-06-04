@@ -20,6 +20,7 @@ Personal configuration files for my machine, **Amphibia**.
 - `VSCodium/`: Editor settings and extensions.
 
 ![Screenshot](screenshot.png)
+![Screenshot](screenshot2.png)
 
 ## 🚀 Usage
 To clone this repository to a new machine:
