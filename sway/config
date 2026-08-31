@@ -124,6 +124,11 @@ bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume -l 1.1 @DEFAULT_AUDI
 bindsym --locked XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym --locked XF86AudioPlay exec playerctl play-pause
+bindsym --locked XF86AudioPause exec playerctl play-pause
+bindsym --locked XF86AudioNext exec playerctl next
+bindsym --locked XF86AudioPrev exec playerctl previous
+bindsym --locked XF86AudioStop exec playerctl stop
 
 # Full screen
 bindsym Print exec grimshot save screen ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png
